@@ -1,0 +1,58 @@
+.navbar{
+    background-color: rgb(173, 169, 169);
+    
+    
+}
+.nav-link, .navbar-text {
+    color: rgb(255, 255, 255)!important;
+    font-size: 1.2em;
+}
+
+.navbar ul li
+{
+ margin:0 50px; 
+}
+
+.fas{
+    margin-right: 5px;
+}
+
+#textarea-carousel{
+    position: absolute;
+    top: 0;
+    display: flex;
+	flex-direction: column;
+	top: 225px;
+    align-items: center;
+    margin: auto;
+	height: 100px;
+    width: 100%;
+    z-index: 1;
+}
+
+#textarea-carousel p {
+    font-size: 1.8em;
+    background-color: rgb(101,101,120,0.6);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px!important;
+}
+
+#exemple-card{
+    display: flex!important;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: relative;
+	width: 100%;
+}
+
+.card{
+    display: flex;
+	position: relative;
+}
