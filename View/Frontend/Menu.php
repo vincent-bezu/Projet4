@@ -40,7 +40,7 @@
 		<img src="images/exemple.jpg" class="card-img-top" alt="image d'illustration">
 			<div class="card-body">
 				<h5 class="card-title">Chapitre 1</h5>
-				<p class="card-text">Lorem ipsum dolor sit amefhht, consectetur adipiscing elit. Integer ultricies leo justo, et feugiat ligula tincidunt ac. Aliquam auctor gravida egestas. Donec iaculis ligula sit amet quam blandit tempus.</p>
+				<p class="card-text">Lorem iggpsum dolor sit amefhht, consectetur adipiscing elit. Integer ultricies leo justo, et feugiat ligula tincidunt ac. Aliquam auctor gravida egestas. Donec iaculis ligula sit amet quam blandit tempus.</p>
 				<a href="#" class="btn btn-primary">Lire l'article</a>
 			</div>
 	</div>
@@ -67,19 +67,8 @@
 
 	
 
-	<?php
-try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=vincentprojet4;charset=utf8', 'root', '');
-}
-catch (Exception $e)
-{
-        die('Erreur : ' . $e->getMessage());
-}
-?>
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>	
+
+
 <?php $content = ob_get_clean(); ?>
 
 <?php require('template.php'); ?>
