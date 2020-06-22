@@ -1,7 +1,7 @@
 <?php
 
 require_once('Model/PostManager.php');
-require_once('model/CommentManager.php');
+require_once('Model/CommentManager.php');
 
 function listPosts()
 {
@@ -33,4 +33,11 @@ function addComment($postId, $author, $comment)
     else {
         header('Location: index.php?action=post&id=' . $postId);
     }
+}
+
+function reportComment($commentId, $postId)
+{
+    $commentManager = new CommentManager();
+    $commentManager->reportComment($commentId);
+    header('Location: index.php?action=post&id=' . $postId);
 }

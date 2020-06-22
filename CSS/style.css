@@ -60,3 +60,9 @@ form{
     width: 400px;
     margin-left: 10px;
 }
+
+.nav-linkB{
+    color: rgb(57, 131, 241)!important;
+    font-size: 1.2em;
+    margin-right: 20px;
+}
