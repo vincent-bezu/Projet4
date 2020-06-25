@@ -3,7 +3,7 @@
     <head>
         
         <title><?= $title ?></title>
-        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <script src="https://kit.fontawesome.com/16f6d7b24c.js" crossorigin="anonymous"></script>

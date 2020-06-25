@@ -24,7 +24,7 @@
     <a class="nav-linkB" href="../../index.php?action=listPosts">Accueil</a>
   </li>
   <li class="nav-item">
-    <a class="nav-linkB" href="View/backend/router.php?action=newPost">Nouvel article</a>
+    <a class="nav-linkB" href="../backend/router.php?action=newPost">Nouvel article</a>
   </li>
 </ul>
         <?= $content ?>
