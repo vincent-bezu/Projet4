@@ -1,5 +1,5 @@
 <?php
-require_once("Model/Manager.php");
+require_once(__DIR__ ."/../Model/Manager.php");
 
 class PostManager extends Manager
 {

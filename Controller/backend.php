@@ -1,6 +1,6 @@
 <?php
-require_once('Model/PostManager.php');
-require_once('Model/CommentManager.php');
+require_once(__DIR__ . '/../Model/PostManager.php');
+require_once(__DIR__ . '/../Model/CommentManager.php');
 
 
 function viewAdminDashboard()
@@ -10,7 +10,7 @@ function viewAdminDashboard()
     
     $postManager = new PostManager(); // Création d'un objet
     $posts = $postManager->getPosts(); // Appel d'une fonction de cet objet
-    require('View/backend/MenuB.php');
+    require(__DIR__ .'/../View/backend/MenuB.php');
 }
 
 function restoreComment($commentId)
@@ -29,7 +29,7 @@ function deleteComment($commentId){
 function viewNewPost()
 {
     $postManager = new PostManager(); // Création d'un objet
-    require('View/backend/NewPost.php');
+    require(__DIR__ .'/../View/backend/NewPost.php');
 }   
 
 function addPost($title, $content)
@@ -42,7 +42,7 @@ function addPost($title, $content)
         throw new Exception('Impossible d\'ajouter l\'article !');
     }
     else {
-        header('Location: index.php?action=adminDashboard');
+        header('Location: View/backend/router.php?action=adminDashboard');
     }
 }
 
