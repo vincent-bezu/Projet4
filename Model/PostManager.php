@@ -20,4 +20,20 @@ class PostManager extends Manager
 
         return $post;
     }
+
+    public function createPost($title, $content)
+    {
+        $db = $this->dbConnect();
+        $posts = $db->prepare('INSERT INTO posts(title, content, creation_date) VALUES(?, ?, NOW())');
+        $affectedLines = $posts->execute(array($title, $content));
+
+        return $affectedLines;
+    }
+
+    public function deletePost($Id)
+    {
+        $db = $this->dbConnect();
+        $Posts = $db->prepare('DELETE FROM Posts WHERE id = ?');
+        $Posts->execute(array($Id));
+    }
 }

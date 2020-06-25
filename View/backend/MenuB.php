@@ -16,7 +16,7 @@
 				<em>le <?= $data['creation_date_fr'] ?></em>
 				<p class="card-text"><?= nl2br(htmlspecialchars(substr($data['content'],0,10))) ?>...
 				<div>	<a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Modifier</a>
-						<a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Supprimer</a>
+						<a href="index.php?action=deletePost&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Supprimer</a>
 				</div>
 			</div>
 		</div>

@@ -4,7 +4,7 @@
 <h1><?= htmlspecialchars($post['title']) ?></h1>
 
 <p><em>le <?= $post['creation_date_fr'] ?></em></p>
-<p><?= nl2br(htmlspecialchars($post['content'])) ?></p>
+<p><?= nl2br($post['content']) ?></p>
 
 <h2>Commentaires</h2>
 

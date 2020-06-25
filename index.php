@@ -61,8 +61,28 @@ try {
             }
         }
 
-        elseif ($_GET['action'] == 'NewPost'){
+        elseif ($_GET['action'] == 'newPost'){
             viewNewPost();
+        }
+
+        elseif ($_GET['action'] == 'addPost') {
+            
+                
+                if (!empty($_POST['title']) && !empty($_POST['content'])) {
+                    addPost($_POST['title'], $_POST['content']);
+                }
+                else {
+                    throw new Exception('Tous les champs ne sont pas remplis !');
+                } 
+        }
+
+        elseif ($_GET['action'] == 'deletePost'){
+            if (isset($_GET['id']) && $_GET['id'] > 0 ){
+                deletePost($_GET['id']);
+            }
+            else {
+                throw new Exception('Aucun identifiant de commentaire envoyé');
+            }
         }
     }
     else {
