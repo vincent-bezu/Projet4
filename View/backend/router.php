@@ -6,7 +6,7 @@ try {
         if ($_GET['action'] == 'adminDashboard'){
             viewAdminDashboard();
         }
-    }
+    
     
     elseif ($_GET['action'] == 'restoreComment'){
         if (isset($_GET['id']) && $_GET['id'] > 0 ){
@@ -25,7 +25,7 @@ try {
                 throw new Exception('Aucun identifiant de commentaire envoyé');
             }
         }
-        
+
     elseif ($_GET['action'] == 'newPost'){
             viewNewPost();
         }
@@ -48,6 +48,28 @@ try {
                 throw new Exception('Aucun identifiant de commentaire envoyé');
             }
         }
+    }
+
+    elseif ($_GET['action'] == 'viewEditPost'){
+        if (isset($_GET['id']) && $_GET['id'] > 0) {
+            viewEditPost($_GET['id']);
+        }
+        else {
+            throw new Exception('Aucun identifiant de billet envoyé');
+        }
+    }
+    
+    elseif ($_GET['action'] == 'editPost') {
+            
+                
+        if (!empty($_POST['title']) && !empty($_POST['content'])) {
+            editPost($_POST['title'], $_POST['content']);
+        }
+        else {
+            throw new Exception('Tous les champs ne sont pas remplis !');
+        } 
+}
+    
     }
     catch(Exception $e) {
         echo 'Erreur : ' . $e->getMessage();

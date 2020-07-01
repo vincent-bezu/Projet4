@@ -16,7 +16,7 @@ try {
         }
         elseif ($_GET['action'] == 'addComment') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
-                var_dump($_POST);
+                
                 if (!empty($_POST['Author']) && !empty($_POST['Comment'])) {
                     addComment($_GET['id'], $_POST['Author'], $_POST['Comment']);
                 }

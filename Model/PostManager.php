@@ -36,4 +36,13 @@ class PostManager extends Manager
         $Posts = $db->prepare('DELETE FROM Posts WHERE id = ?');
         $Posts->execute(array($Id));
     }
+
+    public function editThePost($title, $content)
+    {
+        $db = $this->dbConnect();
+        $posts = $db->prepare('UPDATE posts(title, content) VALUES(?, ?)');
+        $affectedLines = $posts->execute(array($title, $content));
+
+        return $affectedLines;
+    }
 }

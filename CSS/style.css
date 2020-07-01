@@ -43,6 +43,12 @@ h1{
     margin-top: 10px !important;
 }
 
+h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px !important;
+}
+
 #exemple-card{
     display: flex !important;
 	flex-direction: row;
@@ -57,7 +63,7 @@ h1{
 }
 
 form{
-    width: 400px;
+    width: 80%;
     margin-left: 10px;
 }
 
@@ -69,4 +75,24 @@ form{
 
 .newPostForm{
     margin: 0 auto;
+}
+
+#textPostView p {
+    color: gray;
+    font-size: 1.2rem;
+    margin: 0 60px 60px 60px !important;
+}
+
+@media screen and (max-width: 450px){
+    #textPostView p {
+        color: gray;
+        font-size: 1.2rem;
+        margin: 0 20px 60px 20px !important;
+    }
+}
+
+@media screen and (max-width: 822px){
+    #carouselExampleSlidesOnly{
+        display: none;
+    }
 }

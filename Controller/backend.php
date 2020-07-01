@@ -42,12 +42,31 @@ function addPost($title, $content)
         throw new Exception('Impossible d\'ajouter l\'article !');
     }
     else {
-        header('Location: View/backend/router.php?action=adminDashboard');
+        header('Location: ../../View/backend/router.php?action=adminDashboard');
     }
 }
 
 function deletePost($Id){
     $PostManager = new PostManager();
     $PostManager->deletePost($Id);
+    viewAdminDashboard();
+}
+
+function viewEditPost($postId){
+    $postManager = new PostManager();
+    $post = $postManager->getPost($postId);
+    require(__DIR__ .'/../view/backend/ViewEditPost.php');
+}
+
+function editPost($title, $content){
+    $postManager = new PostManager();
+    $affectedLines = $postManager->editThePost($title, $content);
+
+    if ($affectedLines === false) {
+        throw new Exception('Impossible de modifier l\'article !');
+    }
+    else {
+        header('Location: ../../View/backend/router.php?action=adminDashboard');
+    }
     viewAdminDashboard();
 }
