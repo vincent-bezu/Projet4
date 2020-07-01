@@ -14,7 +14,7 @@
 			<div class="card-body">
 				<h5 class="card-title"><?= htmlspecialchars($data['title']) ?></h5>
 				<em>le <?= $data['creation_date_fr'] ?></em>
-				<p class="card-text"><?= nl2br(htmlspecialchars(substr($data['content'],0,50))) ?>...
+				<p class="card-text"><?= nl2br(htmlspecialchars(substr($data['content'],0,150))) ?>...
 				<div>	<a href="../../View/backend/router.php?action=editPost&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Modifier</a>
 						<a href="../../View/backend/router.php?action=deletePost&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Supprimer</a>
 				</div>
