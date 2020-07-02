@@ -55,12 +55,12 @@ function deletePost($Id){
 function viewEditPost($postId){
     $postManager = new PostManager();
     $post = $postManager->getPost($postId);
-    require(__DIR__ .'/../view/backend/ViewEditPost.php');
+    require(__DIR__ .'/../View/backend/ViewEditPost.php');
 }
 
-function editPost($title, $content){
+function editPost($title, $content, $id){
     $postManager = new PostManager();
-    $affectedLines = $postManager->editThePost($title, $content);
+    $affectedLines = $postManager->editPost($title, $content, $id);
 
     if ($affectedLines === false) {
         throw new Exception('Impossible de modifier l\'article !');

@@ -48,7 +48,7 @@ try {
                 throw new Exception('Aucun identifiant de commentaire envoyé');
             }
         }
-    }
+    
 
     elseif ($_GET['action'] == 'viewEditPost'){
         if (isset($_GET['id']) && $_GET['id'] > 0) {
@@ -62,14 +62,14 @@ try {
     elseif ($_GET['action'] == 'editPost') {
             
                 
-        if (!empty($_POST['title']) && !empty($_POST['content'])) {
-            editPost($_POST['title'], $_POST['content']);
+        if (!empty($_POST['title']) && !empty($_POST['content']) && isset($_GET['id']) && $_GET['id'] > 0) {
+            editPost($_POST['title'], $_POST['content'], $_GET['id']);
         }
         else {
             throw new Exception('Tous les champs ne sont pas remplis !');
         } 
 }
-    
+    }
     }
     catch(Exception $e) {
         echo 'Erreur : ' . $e->getMessage();

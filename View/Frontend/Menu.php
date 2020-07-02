@@ -24,8 +24,8 @@
 			<div class="card-body">
 				<h5 class="card-title"><?= htmlspecialchars($data['title']) ?></h5>
 				<em>le <?= $data['creation_date_fr'] ?></em>
-				<p class="card-text"><?= nl2br(htmlspecialchars(substr($data['content'],0,150))) ?>...
-				<a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Lire l'article</a>
+				<p class="card-text"><?= nl2br(substr(strip_tags($data['content']),0,150)) ?>...
+				<div><a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Lire l'article</a></div>
 			</div>
 		</div>
 		

@@ -11,7 +11,7 @@
         <script>
           tinymce.init({
             selector: '.tinyTextArea',
-            encoding: 'xml'
+            
           });
         </script>
         <title>Jean Forteroche</title>
