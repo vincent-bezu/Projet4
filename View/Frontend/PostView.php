@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 <h1><?= htmlspecialchars($post['title']) ?></h1>
 
-<p><em>le <?= $post['creation_date_fr'] ?></em></p>
+<div class="creationDate"><p><em>le <?= $post['creation_date_fr'] ?></em></p></div>
 <div id="textPostView"><p><?= nl2br($post['content']) ?></p></div>
 
 <h2>Commentaires</h2>
@@ -12,9 +12,9 @@
         while ($comment = $comments->fetch())
         {
         ?>
-            <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
+            <div class="commentBloc"><p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
             <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
-            <p><a href="index.php?action=reportComment&amp;id=<?= $comment['id'] ?>&amp;postId=<?= $post['id'] ?>">Signaler le commentaire</a></p>
+            <p><a href="index.php?action=reportComment&amp;id=<?= $comment['id'] ?>&amp;postId=<?= $post['id'] ?>">Signaler le commentaire</a></p></div>
         <?php
         }
         ?>

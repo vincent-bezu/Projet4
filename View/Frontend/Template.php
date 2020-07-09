@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
         <title><?= $title ?></title>
         <link rel="stylesheet" type="text/css" href="../../CSS/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,26 +12,26 @@
         
     <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="http://projet4/"><i class="fas fa-home"></i>Accueil<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-book-open"></i>Articles</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Contact</a>
-      </li>
-    </ul>
-    <span class="navbar-text">
-      Site de Jean Forteroche - Ecrivain
-    </span>
-  </div>
-</nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://projet4/"><i class="fas fa-home"></i>Accueil<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#articles"><i class="fas fa-book-open"></i>Articles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Contact</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          Site de Jean Forteroche - Ecrivain
+        </span>
+      </div>
+    </nav>
         <?= $content ?>
 
       <footer><a href="View/backend/router.php?action=adminDashboard">Espace administrateur</a> </footer>
